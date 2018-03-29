@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xwikidoc version="1.3" reference="Reports.Code.ReportsTranslations" locale="">
+  <web>Reports.Code</web>
+  <name>ReportsTranslations</name>
+  <language/>
+  <defaultLanguage/>
+  <translation>0</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <creationDate>1514761200000</creationDate>
+  <parent>ReportsClass</parent>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <date>1514761200000</date>
+  <contentUpdateDate>1514761200000</contentUpdateDate>
+  <version>1.1</version>
+  <title/>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>true</hidden>
+  <content># Class fields
+Reports.Code.ReportsClass_title1=Title
+Reports.Code.ReportsClass_desc=Description
+Reports.Code.ReportsClass_status=Status
+Reports.Code.ReportsClass_status_new=New
+Reports.Code.ReportsClass_status_prepared=Prepared
+Reports.Code.ReportsClass_status_generated=Generated
+Reports.Code.ReportsClass_responsible=Responsible
+Reports.Code.ReportsClass_variables=Variables
+Reports.Code.ReportsClass_pdfTemplate=PDF Template
+
+# Live table generic keys
+reports.livetable.doc.title=Page Title
+reports.livetable.doc.name=Page Name
+reports.livetable.doc.space=Space
+reports.livetable.doc.fullname=Page full name
+reports.livetable.doc.location=Location
+reports.livetable.doc.author=Last Author
+reports.livetable.doc.creator=Creator
+reports.livetable.doc.date=Date
+reports.livetable.doc.creationDate=Creation Date
+reports.livetable._avatar=Avatar
+reports.livetable._images=Images
+reports.livetable._attachments=Attachments
+reports.livetable._actions=Actions
+reports.livetable._actions.edit=Edit
+reports.livetable._actions.delete=Delete
+reports.livetable.emptyvalue=-
+
+# Live table specific keys
+reports.livetable.title1=Title
+reports.livetable.desc=Description
+reports.livetable.status=Status
+reports.livetable.responsible=Responsible
+reports.livetable.variables=Variables
+reports.livetable.pdfTemplate=Custom PDF Template
+
+# Other keys
+reports.entry.name=Reports
+
+# Deprecated keys
+reports.dataSpace.title=Data
+
+# Report Menu
+reports.menu.viewreportconfig=View Report Configuration
+reports.menu.editreportconfig=Edit Report Configuration
+reports.menu.previewreport=Preview Report
+reports.menu.generatereport=Generate Report
+reports.menu.reconfigurereport=Reconfigure report
+reports.menu.editreport=Edit Report
+reports.menu.viewreport=View Report
+reports.menu.regeneratereport=Regenerate Report (Carefull)
+reports.menu.pdfreport=PDF Report
+
+reports.variables.title=Variables
+reports.variables.description=The following fields are used in the documents included in the report. Please provide the values for these fields.
+reports.variables.save=Save
+reports.variables.configuration=Configuration for page {0}
+reports.variables.savemessage=Saving report variables
+
+reports.generation.savemessage=Report Generated
+reports.regeneration.savemessage=Section {0} regenerated
+reports.resetgeneration.savemessage=Rollback generation
+
+reports.reportsparts.title=Report Parts
+reports.reportsparts.reportpart=Report Part
+reports.reportsparts.desc=Description
+reports.reportsparts.includetype=Include Type
+reports.reportsparts.actions=Actions
+reports.reportsparts.removepart=Remove Part
+reports.reportsparts.addpart=Add Part
+
+# Field Macro
+reports.fieldmacro.update.success=Field has been updated succesfully
+reports.fieldmacro.update.error=An error occured while updating the field
+rendering.macro.reportfield.name=Report Field
+rendering.macro.reportfield.description=Insert a field in a report part for the reporting application
+rendering.macro.reportfield.parameter.name.name=Field Name
+rendering.macro.reportfield.parameter.name.description=Field name to display to the user using this report part
+
+
+reports.reportsectionmacro.regenerate=Regenerate Section
+reports.reportsectionmacro.section=Report Section
+reports.reportsectionmacro.includetype=Include Type
+
+rendering.macro.reportsection.name=Report Section
+rendering.macro.reportsection.description=Marker of a report section in a generation of a report
+rendering.macro.reportsection.parameter.part.name=Report part
+rendering.macro.reportsection.parameter.part.description=Report part used
+rendering.macro.reportsection.parameter.type.name=Include Type
+rendering.macro.reportsection.parameter.type.description=Include Type used for the generation (include or copy)
+
+</content>
+  <object>
+    <name>Reports.Code.ReportsTranslations</name>
+    <number>0</number>
+    <className>XWiki.TranslationDocumentClass</className>
+    <guid>4bd52019-c3de-49be-932e-543e055a8883</guid>
+    <class>
+      <name>XWiki.TranslationDocumentClass</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <scope>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>scope</name>
+        <number>1</number>
+        <prettyName>Scope</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators>|, </separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>GLOBAL|WIKI|USER|ON_DEMAND</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </scope>
+    </class>
+    <property>
+      <scope>WIKI</scope>
+    </property>
+  </object>
+</xwikidoc>
