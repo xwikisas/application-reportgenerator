@@ -24,13 +24,13 @@
   <parent>
     <groupId>org.xwiki.commons</groupId>
     <artifactId>xwiki-commons-pom</artifactId>
-    <version>5.4.4</version>
+    <version>8.4</version>
   </parent>
   <groupId>org.xwiki.contrib</groupId>
-  <artifactId>application-report-generator-application</artifactId>
+  <artifactId>application-reportgenerator</artifactId>
   <version>1.0</version>
   <packaging>xar</packaging>
-  <name>XWiki Application - Report Generator Application</name>
+  <name>Application - Report Generator</name>
   <description>Application allowing to generate documents from report parts and export them as nice PDF documents</description>
   <developers>
     <developer>
