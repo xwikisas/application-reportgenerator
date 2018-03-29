@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xwikidoc version="1.3" reference="Reports.SampleReport.WebHome" locale="">
+  <web>Reports.SampleReport</web>
+  <name>WebHome</name>
+  <language/>
+  <defaultLanguage/>
+  <translation>0</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <creationDate>1514761200000</creationDate>
+  <parent>sales:Reports.WebHome</parent>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <date>1514761200000</date>
+  <contentUpdateDate>1514761200000</contentUpdateDate>
+  <version>1.1</version>
+  <title>Sample Report</title>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>false</hidden>
+  <content>{{reportsection part='Reports.ReportParts.Introduction.WebHome' type='copy' /}}
+ 
+
+
+(% class="contact-table" style="border-spacing:0" %)
+|(% style="color:#07a7d9" %)Recipient |(((
+{{reportfield name="company"/}}
+
+{{reportfield name="address" type="textarea"/}}
+)))
+|(% style="background-color:#eeeeee; color:#07a7d9" %)Name|(% style="background-color:#eeeeee" %)(((
+{{reportfield name="contact"/}}
+)))
+|(% style="color:#07a7d9" %)Reference|(((
+{{reportfield name="proposalid"/}}
+)))
+|(% style="background-color:#eeeeee; color:#07a7d9" %)Date|(% style="background-color:#eeeeee" %)(((
+{{reportfield name="proposalDate" type="date"/}}
+)))
+|(% style="color:#07a7d9" %)Offer Validity|(((
+{{reportfield name="validityDate" type="date"/}}
+)))
+|(% style="background-color:#eeeeee; color:#07a7d9" %)XWiki contact|(% style="background-color:#eeeeee" %)(((
+{{reportfield name="salescontact"/}}
+ {{reportfield name="salesemail"/}}
+ {{reportfield name="salesphone"/}}
+)))
+
+
+Dear Madam/Sir,
+
+Further to our conversation, I am pleased to send you the attached service proposal for the project we have discussed. If this proposal is agreed on, please send us by email a scanned signed version of it. 
+
+Thank You,
+
+{{reportfield name="salescontact"/}}
+
+{{pagebreak/}}
+
+{{reportsection part='Reports.ReportParts.Context.WebHome' type='copy' /}}
+= Context =
+
+This purchase order, following {{reportfield name="company" /}}'s request to provide a quote for the following XWiki services ("Services"), is between {{reportfield name="company" /}} ("Client") and XWiki SAS ("Provider").
+
+
+
+{{reportsection part='Reports.ReportParts.Proposal.WebHome' type='copy' /}}
+= Technical Support =
+
+To assist the wiki administrators in managing the content within the wiki, XWiki recommends the {{reportfield name="level"/}} support level. Technical support of the application covers the daily assistance when using the application. It enables the person in charge of XWiki in Client’s team to contact the members of XWiki Support Team at any time during the use and the set up of the software in order to get help and support via a ticketing tool.
+
+A detailed description of the support contract is proposed in the document //{{reportfield name="conditions"/}}// attached.
+
+Our technical support service is valid within the following limits:
+
+* Up to {{reportfield name="users"/}} users
+* Up to {{reportfield name="wikis"/}} wikis
+
+
+The support contract is priced at  {{reportfield name="price"/}} per year for a 3 year engagement.
+
+
+{{reportsection part='Reports.ReportParts.PageBreak.WebHome' type='include' /}}{{include document='Reports.ReportParts.PageBreak.WebHome' /}}
+
+{{reportsection part='Reports.ReportParts.TermsOfSales.WebHome' type='include' /}}{{include document='Reports.ReportParts.TermsOfSales.WebHome' /}}
+
+</content>
+  <object>
+    <name>Reports.SampleReport.WebHome</name>
+    <number>0</number>
+    <className>Reports.Code.ReportElementClass</className>
+    <guid>7923d8d2-0e5e-4985-80aa-36bf96d6af43</guid>
+    <class>
+      <name>Reports.Code.ReportElementClass</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <includetype>
+        <cache>0</cache>
+        <customDisplay/>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>includetype</name>
+        <number>2</number>
+        <picker>0</picker>
+        <prettyName>includetype</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators>|, </separators>
+        <size>1</size>
+        <sort>none</sort>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
+        <values>copy=Copy Content|include=Include Page</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </includetype>
+      <reportpart>
+        <cache>0</cache>
+        <classname/>
+        <customDisplay/>
+        <disabled>0</disabled>
+        <displayType>input</displayType>
+        <idField/>
+        <multiSelect>0</multiSelect>
+        <name>reportpart</name>
+        <number>1</number>
+        <picker>1</picker>
+        <prettyName>Report Part</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators/>
+        <size>60</size>
+        <sort>value</sort>
+        <sql>select obj.name, doc.title from XWikiDocument as doc, BaseObject as obj where doc.fullName=obj.name and obj.className='Reports.ReportParts.Code.ReportPartsClass' and doc.fullName&lt;&gt;'Reports.ReportParts.Code.ReportPartsTemplate' order by doc.title asc</sql>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
+        <valueField/>
+        <classType>com.xpn.xwiki.objects.classes.DBListClass</classType>
+      </reportpart>
+    </class>
+    <property>
+      <includetype>copy</includetype>
+    </property>
+    <property>
+      <reportpart>Reports.ReportParts.Introduction.WebHome</reportpart>
+    </property>
+  </object>
+  <object>
+    <name>Reports.SampleReport.WebHome</name>
+    <number>2</number>
+    <className>Reports.Code.ReportElementClass</className>
+    <guid>7338ede0-6dce-4565-b655-b442857dbea7</guid>
+    <class>
+      <name>Reports.Code.ReportElementClass</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <includetype>
+        <cache>0</cache>
+        <customDisplay/>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>includetype</name>
+        <number>2</number>
+        <picker>0</picker>
+        <prettyName>includetype</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators>|, </separators>
+        <size>1</size>
+        <sort>none</sort>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
+        <values>copy=Copy Content|include=Include Page</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </includetype>
+      <reportpart>
+        <cache>0</cache>
+        <classname/>
+        <customDisplay/>
+        <disabled>0</disabled>
+        <displayType>input</displayType>
+        <idField/>
+        <multiSelect>0</multiSelect>
+        <name>reportpart</name>
+        <number>1</number>
+        <picker>1</picker>
+        <prettyName>Report Part</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators/>
+        <size>60</size>
+        <sort>value</sort>
+        <sql>select obj.name, doc.title from XWikiDocument as doc, BaseObject as obj where doc.fullName=obj.name and obj.className='Reports.ReportParts.Code.ReportPartsClass' and doc.fullName&lt;&gt;'Reports.ReportParts.Code.ReportPartsTemplate' order by doc.title asc</sql>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
+        <valueField/>
+        <classType>com.xpn.xwiki.objects.classes.DBListClass</classType>
+      </reportpart>
+    </class>
+    <property>
+      <includetype>copy</includetype>
+    </property>
+    <property>
+      <reportpart>Reports.ReportParts.Context.WebHome</reportpart>
+    </property>
+  </object>
+  <object>
+    <name>Reports.SampleReport.WebHome</name>
+    <number>3</number>
+    <className>Reports.Code.ReportElementClass</className>
+    <guid>416c682b-973c-4604-9132-74b602a46af4</guid>
+    <class>
+      <name>Reports.Code.ReportElementClass</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <includetype>
+        <cache>0</cache>
+        <customDisplay/>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>includetype</name>
+        <number>2</number>
+        <picker>0</picker>
+        <prettyName>includetype</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators>|, </separators>
+        <size>1</size>
+        <sort>none</sort>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
+        <values>copy=Copy Content|include=Include Page</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </includetype>
+      <reportpart>
+        <cache>0</cache>
+        <classname/>
+        <customDisplay/>
+        <disabled>0</disabled>
+        <displayType>input</displayType>
+        <idField/>
+        <multiSelect>0</multiSelect>
+        <name>reportpart</name>
+        <number>1</number>
+        <picker>1</picker>
+        <prettyName>Report Part</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators/>
+        <size>60</size>
+        <sort>value</sort>
+        <sql>select obj.name, doc.title from XWikiDocument as doc, BaseObject as obj where doc.fullName=obj.name and obj.className='Reports.ReportParts.Code.ReportPartsClass' and doc.fullName&lt;&gt;'Reports.ReportParts.Code.ReportPartsTemplate' order by doc.title asc</sql>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
+        <valueField/>
+        <classType>com.xpn.xwiki.objects.classes.DBListClass</classType>
+      </reportpart>
+    </class>
+    <property>
+      <includetype>copy</includetype>
+    </property>
+    <property>
+      <reportpart>Reports.ReportParts.Proposal.WebHome</reportpart>
+    </property>
+  </object>
+  <object>
+    <name>Reports.SampleReport.WebHome</name>
+    <number>4</number>
+    <className>Reports.Code.ReportElementClass</className>
+    <guid>30dcdc8c-8977-4213-9f30-95412a693e84</guid>
+    <class>
+      <name>Reports.Code.ReportElementClass</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <includetype>
+        <cache>0</cache>
+        <customDisplay/>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>includetype</name>
+        <number>2</number>
+        <picker>0</picker>
+        <prettyName>includetype</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators>|, </separators>
+        <size>1</size>
+        <sort>none</sort>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
+        <values>copy=Copy Content|include=Include Page</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </includetype>
+      <reportpart>
+        <cache>0</cache>
+        <classname/>
+        <customDisplay/>
+        <disabled>0</disabled>
+        <displayType>input</displayType>
+        <idField/>
+        <multiSelect>0</multiSelect>
+        <name>reportpart</name>
+        <number>1</number>
+        <picker>1</picker>
+        <prettyName>Report Part</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators/>
+        <size>60</size>
+        <sort>value</sort>
+        <sql>select obj.name, doc.title from XWikiDocument as doc, BaseObject as obj where doc.fullName=obj.name and obj.className='Reports.ReportParts.Code.ReportPartsClass' and doc.fullName&lt;&gt;'Reports.ReportParts.Code.ReportPartsTemplate' order by doc.title asc</sql>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
+        <valueField/>
+        <classType>com.xpn.xwiki.objects.classes.DBListClass</classType>
+      </reportpart>
+    </class>
+    <property>
+      <includetype>include</includetype>
+    </property>
+    <property>
+      <reportpart>Reports.ReportParts.PageBreak.WebHome</reportpart>
+    </property>
+  </object>
+  <object>
+    <name>Reports.SampleReport.WebHome</name>
+    <number>5</number>
+    <className>Reports.Code.ReportElementClass</className>
+    <guid>b54a26ff-5c8a-4c12-8df9-e63423b51823</guid>
+    <class>
+      <name>Reports.Code.ReportElementClass</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <includetype>
+        <cache>0</cache>
+        <customDisplay/>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>includetype</name>
+        <number>2</number>
+        <picker>0</picker>
+        <prettyName>includetype</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators>|, </separators>
+        <size>1</size>
+        <sort>none</sort>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
+        <values>copy=Copy Content|include=Include Page</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </includetype>
+      <reportpart>
+        <cache>0</cache>
+        <classname/>
+        <customDisplay/>
+        <disabled>0</disabled>
+        <displayType>input</displayType>
+        <idField/>
+        <multiSelect>0</multiSelect>
+        <name>reportpart</name>
+        <number>1</number>
+        <picker>1</picker>
+        <prettyName>Report Part</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators/>
+        <size>60</size>
+        <sort>value</sort>
+        <sql>select obj.name, doc.title from XWikiDocument as doc, BaseObject as obj where doc.fullName=obj.name and obj.className='Reports.ReportParts.Code.ReportPartsClass' and doc.fullName&lt;&gt;'Reports.ReportParts.Code.ReportPartsTemplate' order by doc.title asc</sql>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
+        <valueField/>
+        <classType>com.xpn.xwiki.objects.classes.DBListClass</classType>
+      </reportpart>
+    </class>
+    <property>
+      <includetype>include</includetype>
+    </property>
+    <property>
+      <reportpart>Reports.ReportParts.TermsOfSales.WebHome</reportpart>
+    </property>
+  </object>
+  <object>
+    <name>Reports.SampleReport.WebHome</name>
+    <number>0</number>
+    <className>Reports.Code.ReportsClass</className>
+    <guid>b79e1489-0413-4b87-aeae-74d17a322786</guid>
+    <class>
+      <name>Reports.Code.ReportsClass</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <desc>
+        <contenttype>---</contenttype>
+        <customDisplay/>
+        <disabled>0</disabled>
+        <editor>Text</editor>
+        <name>desc</name>
+        <number>2</number>
+        <picker>0</picker>
+        <prettyName>Description</prettyName>
+        <rows>5</rows>
+        <size>40</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </desc>
+      <pdfTemplate>
+        <cache>0</cache>
+        <classname>XWiki.PDFClass</classname>
+        <customDisplay/>
+        <disabled>0</disabled>
+        <displayType>input</displayType>
+        <idField>doc.fullName</idField>
+        <multiSelect>0</multiSelect>
+        <name>pdfTemplate</name>
+        <number>5</number>
+        <picker>0</picker>
+        <prettyName>Custom PDF Template</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators/>
+        <size>1</size>
+        <sort>none</sort>
+        <sql/>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
+        <valueField>doc.title</valueField>
+        <classType>com.xpn.xwiki.objects.classes.DBListClass</classType>
+      </pdfTemplate>
+      <responsible>
+        <cache>0</cache>
+        <customDisplay/>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>responsible</name>
+        <number>4</number>
+        <picker>0</picker>
+        <prettyName>Responsible</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators/>
+        <size>6</size>
+        <sort>none</sort>
+        <unmodifiable>0</unmodifiable>
+        <usesList>1</usesList>
+        <validationMessage/>
+        <validationRegExp/>
+        <classType>com.xpn.xwiki.objects.classes.UsersClass</classType>
+      </responsible>
+      <status>
+        <cache>0</cache>
+        <customDisplay/>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>status</name>
+        <number>3</number>
+        <picker>0</picker>
+        <prettyName>Status</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators> ,|</separators>
+        <size>1</size>
+        <sort>none</sort>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
+        <values>new=New|prepared=Prepared|generated=Generated</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </status>
+      <title1>
+        <customDisplay>{{include reference="AppWithinMinutes.Title"/}}</customDisplay>
+        <disabled>0</disabled>
+        <name>title1</name>
+        <number>1</number>
+        <prettyName>Title</prettyName>
+        <script/>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
+        <classType>com.xpn.xwiki.objects.classes.ComputedFieldClass</classType>
+      </title1>
+      <variables>
+        <contenttype>---</contenttype>
+        <customDisplay/>
+        <disabled>0</disabled>
+        <editor>Text</editor>
+        <name>variables</name>
+        <number>6</number>
+        <picker>0</picker>
+        <prettyName>Variables</prettyName>
+        <rows>5</rows>
+        <size>40</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </variables>
+    </class>
+    <property>
+      <desc>This is a sample report available from the Create Menu</desc>
+    </property>
+    <property>
+      <pdfTemplate>Reports.Code.XWikiSASPDFTemplate</pdfTemplate>
+    </property>
+    <property>
+      <responsible/>
+    </property>
+    <property>
+      <status>generated</status>
+    </property>
+    <property>
+      <variables>{"company":"NewCorp","address":"35 Champs Elysées\r\n75008 Paris\r\nFrance","contact":"John Doe","proposalid":"XXX-2018-Y","proposalDate":"2018/03/30","validityDate":"2018/04/30","salescontact":"Mr Sales","salesemail":"","salesphone":"","level":"Gold","conditions":"XWikiGeneralConditions2018.pdf","users":"100","wikis":"25","price":"5000"}</variables>
+    </property>
+  </object>
+</xwikidoc>
