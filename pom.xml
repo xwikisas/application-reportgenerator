@@ -27,7 +27,7 @@
   </parent>
   <groupId>com.xwiki.reportgenerator</groupId>
   <artifactId>application-reportgenerator</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
   <packaging>xar</packaging>
   <name>Application - Report Generator</name>
   <description>Application allowing to generate documents from report parts and export them as nice PDF documents</description>
@@ -59,7 +59,7 @@
     <connection>scm:git:git://github.com/xwikisas/application-reportgenerator.git</connection>
     <developerConnection>scm:git:git@github.com:xwikisas/application-reportgenerator.git</developerConnection>
     <url>https://github.com/xwikisas/application-reportgenerator</url>
-    <tag>HEAD</tag>
+    <tag>application-reportgenerator-1.0</tag>
   </scm>
   <distributionManagement>
     <repository>
